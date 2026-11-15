@@ -1,1 +1,379 @@
 # felix368521.github.io
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículum Vitae - [Tu Nombre]</title>
+    <!-- Fuente moderna desde Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Iconos de FontAwesome para LinkedIn y detalles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #1e3a8a; /* Azul institucional elegante */
+            --secondary-color: #3b82f6;
+            --bg-color: #f3f4f6;
+            --card-bg: #ffffff;
+            --text-main: #1f2937;
+            --text-muted: #6b7280;
+            --border-color: #e5e7eb;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+
+        /* Encabezado tipo CV */
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 3rem 2.5rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        header .subtitle {
+            font-size: 1.1rem;
+            font-weight: 300;
+            opacity: 0.9;
+            margin-bottom: 1.2rem;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+        }
+
+        .social-links a:hover {
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        /* Contenido principal */
+        main {
+            padding: 2.5rem;
+        }
+
+        section {
+            margin-bottom: 2.5rem;
+        }
+
+        section:last-child {
+            margin-bottom: 0;
+        }
+
+        h2 {
+            font-size: 1.35rem;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Etiquetas de cualidades */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-top: 1rem;
+        }
+
+        .skill-badge {
+            background-color: #eff6ff;
+            color: var(--primary-color);
+            border: 1px solid #bfdbfe;
+            padding: 0.4rem 0.9rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        /* Tarjetas de experiencia y educación */
+        .timeline-item {
+            margin-bottom: 1.2rem;
+            padding-left: 1rem;
+            border-left: 3px solid var(--secondary-color);
+        }
+
+        .timeline-item h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .timeline-item .date {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 0.4rem;
+            display: block;
+        }
+
+        /* Cuadrícula de cursos */
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .course-card {
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1rem;
+            background: #fafafa;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .course-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .course-card h4 {
+            font-size: 1rem;
+            color: var(--text-main);
+            margin-bottom: 0.3rem;
+        }
+
+        /* Listas de profesores y compañeros */
+        .network-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+        }
+
+        .network-card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            background: white;
+        }
+
+        .network-info h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        .network-info p {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .btn-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background-color: #0a66c2; /* Color oficial de LinkedIn */
+            color: white;
+            text-decoration: none;
+            padding: 0.45rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: opacity 0.2s;
+        }
+
+        .btn-link.web-btn {
+            background-color: var(--primary-color);
+        }
+
+        .btn-link:hover {
+            opacity: 0.85;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background: #f9fafb;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 2rem 1.5rem;
+            }
+            main {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- ENCABEZADO -->
+        <header>
+            <h1>[Tu Nombre Completo]</h1>
+            <p class="subtitle">Estudiante Universitario en la Universidad Católica San Pablo (UCSP)</p>
+            <div class="social-links">
+                <!-- Reemplaza el # con tu propio enlace de LinkedIn -->
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin"></i> Mi Perfil de LinkedIn
+                </a>
+            </div>
+        </header>
+
+        <main>
+            <!-- PERFIL PERSONAL Y CUALIDADES -->
+            <section id="perfil">
+                <h2><i class="fas fa-user"></i> Perfil Profesional</h2>
+                <p>
+                    Estudiante de la Universidad Católica San Pablo (UCSP) con sólida ética de trabajo y orientación a resultados. Cuento con experiencia comprobada en el trato directo con el público, resolución de problemas y trabajo bajo presión.
+                </p>
+                <div class="skills-container">
+                    <span class="skill-badge"><i class="fas fa-bolt"></i> Proactivo</span>
+                    <span class="skill-badge"><i class="fas fa-sync-alt"></i> Adaptativo</span>
+                    <span class="skill-badge"><i class="fas fa-clock"></i> Puntual</span>
+                    <span class="skill-badge"><i class="fas fa-check-circle"></i> Disciplinado</span>
+                </div>
+            </section>
+
+            <!-- EXPERIENCIA LABORAL -->
+            <section id="experiencia">
+                <h2><i class="fas fa-briefcase"></i> Experiencia Laboral</h2>
+                <div class="timeline-item">
+                    <h3>Atención al Cliente</h3>
+                    <span class="date">Duración: 1 año y 6 meses</span>
+                    <p>
+                        Gestión y soporte directo a clientes, resolución efectiva de consultas e incidencias, mantenimiento de altos estándares de calidad en el servicio y comunicación asertiva.
+                    </p>
+                </div>
+            </section>
+
+            <!-- FORMACIÓN ACADÉMICA Y CURSOS -->
+            <section id="educacion">
+                <h2><i class="fas fa-graduation-cap"></i> Formación Académica y Cursos</h2>
+                <div class="timeline-item" style="margin-bottom: 1.5rem;">
+                    <h3>Universidad Católica San Pablo (UCSP)</h3>
+                    <span class="date">Arequipa, Perú | En curso</span>
+                    <p>Carrera Profesional de [Nombre de tu Carrera, ej. Administración de Negocios / Ciencia de la Computación]</p>
+                </div>
+
+                <h3 style="font-size: 1.05rem; margin-bottom: 0.8rem; color: var(--text-muted);">Cursos Destacados de la Carrera:</h3>
+                <div class="courses-grid">
+                    <div class="course-card">
+                        <h4><i class="fas fa-laptop-code" style="color: var(--secondary-color);"></i> Introducción a la Computación</h4>
+                    </div>
+                    <div class="course-card">
+                        <h4><i class="fas fa-square-root-alt" style="color: var(--secondary-color);"></i> Cálculo en una Variable</h4>
+                    </div>
+                    <div class="course-card">
+                        <h4><i class="fas fa-book-open" style="color: var(--secondary-color);"></i> Filosofía</h4>
+                    </div>
+                    <div class="course-card">
+                        <h4><i class="fas fa-users" style="color: var(--secondary-color);"></i> Liderazgo</h4>
+                    </div>
+                    <div class="course-card">
+                        <h4><i class="fas fa-chart-line" style="color: var(--secondary-color);"></i> Comportamiento del Consumidor</h4>
+                    </div>
+                    <div class="course-card">
+                        <h4><i class="fas fa-landmark" style="color: var(--secondary-color);"></i> Historia</h4>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PROFESORES -->
+            <section id="profesores">
+                <h2><i class="fas fa-chalkboard-teacher"></i> Docentes</h2>
+                <div class="network-grid">
+                    <div class="network-card">
+                        <div class="network-info">
+                            <h4>Ernesto Cuadros-Vargas</h4>
+                            <p>Docente Universitario - UCSP</p>
+                        </div>
+                        <a href="https://www.linkedin.com/in/ecuadrosv/" target="_blank" rel="noopener noreferrer" class="btn-link">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                    </div>
+                    
+                    <!-- Puedes duplicar este bloque para agregar más profesores -->
+                    <!--
+                    <div class="network-card">
+                        <div class="network-info">
+                            <h4>[Nombre de otro profesor]</h4>
+                            <p>Docente - [Curso]</p>
+                        </div>
+                        <a href="[URL_LINKEDIN]" target="_blank" rel="noopener noreferrer" class="btn-link">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                    </div>
+                    -->
+                </div>
+            </section>
+
+            <!-- COMPAÑEROS -->
+            <section id="companeros">
+                <h2><i class="fas fa-user-friends"></i> Red de Compañeros</h2>
+                <div class="network-grid">
+                    <div class="network-card">
+                        <div class="network-info">
+                            <h4>Mariana de Jesús Quispe Thaquima</h4>
+                            <p>Compañera de estudios - UCSP</p>
+                        </div>
+                        <a href="https://www.linkedin.com/in/mariana-de-jesus-quispe-thaquima-747157436/" target="_blank" rel="noopener noreferrer" class="btn-link">
+                            <i class="fab fa-linkedin"></i> Perfil / Web
+                        </a>
+                    </div>
+
+                    <!-- Puedes duplicar este bloque para agregar las páginas web de más compañeros -->
+                    <!--
+                    <div class="network-card">
+                        <div class="network-info">
+                            <h4>[Nombre del Compañero]</h4>
+                            <p>Página Web Personal</p>
+                        </div>
+                        <a href="[URL_PAGINA_GITHUB_PAGES]" target="_blank" rel="noopener noreferrer" class="btn-link web-btn">
+                            <i class="fas fa-globe"></i> Visitar Web
+                        </a>
+                    </div>
+                    -->
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 [Tu Nombre Completo] — Publicado en GitHub Pages</p>
+        </footer>
+    </div>
+
+</body>
+</html>
